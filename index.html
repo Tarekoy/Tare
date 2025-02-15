@@ -129,7 +129,7 @@
         </div>
  
         <div class="stats">
-            <p>Watched Ads: <span id="watched-ads">0</span></p>
+            <p>Watched Ads: <span id="watched-ads">100</span></p>
             <p>Earn Taka: <span id="earned-points">0</span></p>
         </div>
         <div class="progress-circle">
@@ -236,7 +236,7 @@ async def request_withdraw(event):
         </div>
  
         <div class="stats">
-            <p>Watched Ads: <span id="watched-ads">0</span></p>
+            <p>Watched Ads: <span id="watched-ads">100</span></p>
             <p>Earn Taka: <span id="earned-points">0</span></p>
         </div>
         <div class="progress-circle">
@@ -302,7 +302,7 @@ async def check_balance(event):
     user_id = event.sender_id
 
     if user_id not in user_data:
-        await event.respond("🚫 You haven't watched any ads yet! Start earning with /watch_ad")
+        await event.respond("🚫 You haven't watched any ads yet! Start earning with /watch_ad") 100
         return
 
     balance = user_data[user_id]["balance"]
