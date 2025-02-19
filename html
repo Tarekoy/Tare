@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad Reward System</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            background: #333;
+        }
+        .buttons button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            background: #598cff;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Auto Monetag Ads</h1>
+        <p>Watched Ads: <span id="watched-ads">0</span></p>
+        <p>Earned Taka: <span id="earned-points">0</span></p>
+        <div class="buttons">
+            <button onclick="watchAd()">Watch Ad</button>
+            <a href="https://poawooptugroo.com/4/8885038">
+                <button>Direct Link</button>
+            </a>
+            <button onclick="joinCommunity()">Join Community</button>
+            <button onclick="withdraw()">Withdraw</button>
+        </div>
+    </div>
+
+    <!-- Propeller Ads Script -->
+<script src='//whephiwums.com/vignette.min.js' data-zone='8958851' data-sdk='show_8958851'></script> 
+
+    <script>
+        let adsWatched = 0;
+        let earnedPoints = 0;
+
+        function watchAd() {
+            adsWatched++;
+            earnedPoints += 0.15;
+            document.getElementById("watched-ads").innerText = adsWatched;
+            document.getElementById("earned-points").innerText = earnedPoints.toFixed(2);
+            alert("Ad Watched! You earned 0.15 Taka.");
+        }
+
+        function joinCommunity() {
+            window.location.href = "https://t.me/monetagy";
+        }
+
+        function withdraw() {
+            if (earnedPoints < 50) {
+                alert("Minimum withdrawal is 50 Taka.");
+                return;
+            }
+            alert("Withdrawal request sent!");
+            earnedPoints = 0;
+            document.getElementById("earned-points").innerText = earnedPoints.toFixed(2);
+        }
+    </script>
+</body>
+</html>
